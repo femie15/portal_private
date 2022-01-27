@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <title>Summernote</title>
+<!--  <link href="../css/bootstrap.css" rel="stylesheet">-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!--<script src="jq.js"></script>-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+ <!-- <script src="../js/bootstrap.js"></script>-->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--<link href="summer.css" rel="stylesheet">-->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="summer.js"></script>
+<!--   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>-->
+</head>
+<body>
+  <!--<div id="summernote"><p>Type Here</p></div>-->
+  
+ <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+<button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
+<!--
+  <div  name="editordata" id="click2edit" class="click2edit" oninput="findTotal()">Type here ...</div>-->
+  <form method="post" id="form">
+  <textarea  name="click2edit" id="click2edit" class="click2edit" oninput="findTotal()"> </textarea>
+</form> 
+
+
+
+
+
+  <script>
+  
+
+ 
+ function findTotal() {
+     var names= document.forms['form']['click2edit'].value;
+ alert(names);
+				/*	var hi=document.getElementsByClassName("note-editable").innerHTML;
+					document.getElementById("tt").value=hi;*/
+                } 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     $(document).ready(function() {
+  $('.click2edit').summernote({focus: true});
+});
+	 
+	
+	
+	var edit = function() {
+  $('.click2edit').summernote({focus: true});
+};
+
+var save = function() {
+  var markup = $('.click2edit').summernote('code');
+  $('.click2edit').summernote('destroy');
+};
+
+
+
+  </script>
+</body>
+</html>
